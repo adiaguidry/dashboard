@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import DoughnutChart from "./graphs/doughnutChart";
-import NivoGraph from "./nivoGraph";
-import NivoLineGraph from "./nivoLineGraph";
-import NivoCalendar from "./nivoCalendar";
+// import NivoGraph from "./nivoGraphs/nivoGraph";
+// import NivoLineGraph from "./nivoGraphs/nivoLineGraph";
+// import NivoCalendar from "./nivoCalendar";
 import LineProgress from "./graphs/lineProgress";
 import Calendar from "./graphs/calendar";
 function HomePage() {
@@ -123,9 +123,7 @@ function HomePage() {
             <div class="card-body">
               <h5 class="card-title">Breakfast this Week</h5>
               <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">
-                <NivoCalendar />
-              </p>
+              <p class="card-text"></p>
               <a href="#" class="card-link">
                 Card link
               </a>
@@ -140,9 +138,7 @@ function HomePage() {
             <div class="card-body">
               <h5 class="card-title">Daily Calories</h5>
               <h6 class="card-subtitle mb-2 text-muted">2000</h6>
-              <p class="card-text">
-                <NivoLineGraph />
-              </p>
+              <p class="card-text"></p>
               <a href="#" class="card-link">
                 Another link
               </a>
