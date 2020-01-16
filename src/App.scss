@@ -1,0 +1,134 @@
+$blue: #81a8ff;
+$bodyTextColor: #444;
+$iconTextColor: #cfcfd0;
+$grey: #f2f4f7;
+
+$primary: $blue;
+$success: #45f46f;
+$info: #aff05b;
+$danger: #ff6060;
+$bright-green: #aff05b;
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// $bg-success: $blue;
+
+.bg-success {
+  background-color: $success !important;
+}
+
+.bg-danger {
+  background-color: $danger !important;
+}
+
+.card {
+  height: 100%;
+  border: none !important;
+}
+
+.dashboard-wrapper {
+  background-color: $grey;
+}
+
+.my-progress-bar {
+  position: relative;
+  height: 12px;
+  width: 10rem;
+  background-color: $bright-green;
+  // border-radius: 50px;
+}
+
+.filler {
+  background-color: $success;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 2s ease-in;
+}
+
+.calendar-container {
+  ul {
+    margin: 1rem 0 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    // height: 100px;
+
+    li {
+      margin: 2px;
+      padding: 5px;
+      color: #fff;
+      font-size: 12px;
+      background-color: $primary;
+    }
+  }
+}
+
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+body {
+  overflow-x: hidden;
+  color: $bodyTextColor !important;
+}
+i {
+  color: $iconTextColor !important;
+}
+.nivo-graph {
+  position: relative;
+  height: 15px;
+  width: 10px;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+.list-group-item {
+  border: none !important;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .nivo-graph {
+    width: 300px;
+  }
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
