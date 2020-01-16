@@ -34,17 +34,40 @@ $bright-green: #aff05b;
   position: relative;
   height: 12px;
   width: 10rem;
-  background-color: $bright-green;
+  background-color: $success;
   // border-radius: 50px;
 }
 
 .filler {
-  background-color: $success;
+  background-color: $info;
   height: 100%;
   border-radius: inherit;
   transition: width 2s ease-in;
 }
-
+.month {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  .week {
+    background-color: #fff;
+    margin: 2px;
+    width: 18rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: flex-end;
+  }
+  .day {
+    background-color: $info;
+    margin: 10px;
+    padding: 0.5rem;
+  }
+}
+.flex1 {
+  order: 1;
+}
 .calendar-container {
   ul {
     margin: 1rem 0 0 0;
@@ -62,7 +85,10 @@ $bright-green: #aff05b;
       padding: 5px;
       color: #fff;
       font-size: 12px;
-      background-color: $primary;
+      font-family: Helvetica, sans-serif;
+      font-weight: 800;
+      letter-spacing: 1px;
+      // background-color: $primary;
     }
   }
 }

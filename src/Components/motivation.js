@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import SideBar from "./sideBar";
 import NavBar from "./navBar";
-import Graph from "./doughnutChart";
-import NivoGraph from "./nivoGraph";
-import NivoLineGraph from "./nivoLineGraph";
-import NivoCalendar from "./nivoCalendar";
+import Graph from "./graphs/doughnutChart";
+import NivoGraph from "./nivoGraphs/nivoGraph";
+import NivoLineGraph from "./nivoGraphs/nivoLineGraph";
+import NivoCalendar from "./nivoGraphs/nivoCalendar";
 
 function Motivation() {
   const [users, setUsers] = useState();

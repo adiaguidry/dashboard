@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "./calendar";
 
-const CalendarFiller = () => {
-  console.log();
+const CalendarFiller = ({ ketoDay, noKetoDay }) => {
+  console.log(ketoDay);
   return (
     <ul>
-      <li>Mon</li>
-      <li>Tue</li>
-      <li>Wed</li>
-      <li>Thur</li>
-      <li>Fri</li>
-      <li>Sat</li>
-      <li>Sun</li>
+      <li style={{ backgroundColor: ketoDay }}>Mon</li>
+      <li style={{ backgroundColor: ketoDay }}>Tue</li>
+      <li style={{ backgroundColor: noKetoDay }}>Wed</li>
+      <li style={{ backgroundColor: ketoDay }}>Thur</li>
+      <li style={{ backgroundColor: noKetoDay }}>Fri</li>
+      <li style={{ backgroundColor: noKetoDay }}>Sat</li>
+      <li style={{ backgroundColor: ketoDay }}>Sun</li>
     </ul>
   );
 };

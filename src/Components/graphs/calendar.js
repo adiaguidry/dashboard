@@ -5,7 +5,7 @@ const Calendar = () => {
   console.log();
   return (
     <div className="calendar-container">
-      <CalendarFiller />
+      <CalendarFiller noKetoDay="#45f46f" ketoDay="#81a8ff" />
     </div>
   );
 };

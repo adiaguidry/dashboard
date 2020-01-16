@@ -1,6 +1,6 @@
 import React from "react";
-import NivoDoughnut from "./nivoDoughnut";
-import NivoPie from "./nivoPie";
+import NivoDoughnut from "./nivoGraphs/nivoDoughnut";
+import NivoPie from "./nivoGraphs/nivoPie";
 //put days of the week and cals for the week into state and map over it
 
 const Status = () => {

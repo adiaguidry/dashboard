@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ResponsiveCalendar } from "@nivo/calendar";
-import dataset from "./common/data-calendar";
+import dataset from "../common/data-calendar";
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
