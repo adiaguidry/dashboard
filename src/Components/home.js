@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import DoughnutChart from "./doughnutChart";
+import DoughnutChart from "./graphs/doughnutChart";
 import NivoGraph from "./nivoGraph";
 import NivoLineGraph from "./nivoLineGraph";
 import NivoCalendar from "./nivoCalendar";
-import LineProgress from "./lineProgress";
-import Calendar from "./calendar";
+import LineProgress from "./graphs/lineProgress";
+import Calendar from "./graphs/calendar";
 function HomePage() {
   const [users, setUsers] = useState();
 
@@ -58,12 +58,6 @@ function HomePage() {
                   </div>
                 </div>
               </p>
-              <a href="#" class="card-link">
-                Card link
-              </a>
-              <a href="#" class="card-link">
-                Another link
-              </a>
             </div>
           </div>
         </div>
