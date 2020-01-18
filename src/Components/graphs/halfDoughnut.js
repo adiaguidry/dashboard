@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Doughnut } from "react-chartjs-2";
 import "chartjs-plugin-labels";
 
-const DoughnutChart = ({ chart }) => {
+const HalfDoughnut = ({ chart }) => {
   useEffect(() => {
     if (chart === 1) {
     }
   });
 
   const [data, setData1] = useState({
+    labels: ["30min", "15min", "1hour"],
     datasets: [
       {
         backgroundColor: ["rgb(69, 244, 111)", "#81a8ff", "#AFF000"],
@@ -22,13 +23,13 @@ const DoughnutChart = ({ chart }) => {
     console.log(Doughnut.defaults);
   });
   return (
-    <div style={{ width: 350, height: 150 }}>
+    <div style={{ width: 240 }}>
       <Doughnut
         data={data}
         options={{
-          // rotation: 1 * Math.PI,
-          // circumference: 1 * Math.PI,
-          cutoutPercentage: 80,
+          rotation: 1 * Math.PI,
+          circumference: 1 * Math.PI,
+          cutoutPercentage: 0,
           responsive: false,
           plugins: {
             labels: {
@@ -44,4 +45,4 @@ const DoughnutChart = ({ chart }) => {
   );
 };
 
-export default DoughnutChart;
+export default HalfDoughnut;

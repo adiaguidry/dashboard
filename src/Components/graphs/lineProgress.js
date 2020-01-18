@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 import Filler from "./lineFiller";
 
-const LineProgress = () => {
-  const [percentage, changePercent] = useState(0);
-  const [newPercentage, changeNewPrecentage] = useState(7);
+const LineProgress = ({ data, progress }) => {
+  const [end, setEnd] = useState(0);
+  const [count, setCount] = useState(0);
 
+  console.log(count, progress, end, data);
+
+  const myProgress = progress;
+  const myData = data;
   useEffect(() => {
-    if (percentage === newPercentage) return;
-    changePercent(percentage + 1);
-    console.log(percentage);
+    console.log("progress", myProgress);
+    if (myProgress > count) setCount(count + 1);
+    if (end !== myData) setEnd(end + 1);
   });
 
-  console.log(percentage);
   return (
-    <div className="my-progress-bar">
-      <Filler percentage={percentage} />
+    <div className="m-1 my-progress-bar">
+      <Filler percentage={end} progress={progress} />
     </div>
   );
 };

@@ -32,8 +32,8 @@ $bright-green: #aff05b;
 
 .my-progress-bar {
   position: relative;
-  height: 12px;
-  width: 10rem;
+  height: 18px;
+  width: 100%;
   background-color: $success;
   // border-radius: 50px;
 }
@@ -50,18 +50,26 @@ $bright-green: #aff05b;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
   .week {
-    background-color: #fff;
-    margin: 2px;
-    width: 18rem;
+    // background-color: $success;
+    margin: 1px;
+    width: 9.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-start;
     align-items: flex-end;
+
+    .hitGoal {
+      background-color: $info;
+    }
+  }
+  .week1 {
+    justify-content: flex-end;
   }
   .day {
-    background-color: $info;
-    margin: 10px;
+    background-color: $iconTextColor;
+    margin: 3px;
     padding: 0.5rem;
   }
 }

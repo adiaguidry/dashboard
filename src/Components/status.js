@@ -1,9 +1,21 @@
-import React from "react";
-import NivoDoughnut from "./nivoGraphs/nivoDoughnut";
-import NivoPie from "./nivoGraphs/nivoPie";
+import React, { useState } from "react";
+import Card from "../Components/common/card";
+import DoughnutChart from "./graphs/doughnutChart";
+import HalfDoughnut from "./graphs/halfDoughnut";
+import LineProgress from "./graphs/lineProgress";
+
 //put days of the week and cals for the week into state and map over it
 
 const Status = () => {
+  const [dotw, setdotw] = useState([
+    { day: "Sunday", data: 50, progress: "1500" },
+    { day: "Monday", data: 70, progress: "1700" },
+    { day: "Tuesday", data: 100, progress: "2000" },
+    { day: "Wednesday", data: 100, progress: "2000" },
+    { day: "Thursday", data: 80, progress: "1800" },
+    { day: "Friday", data: 100, progress: "2000" },
+    { day: "Saturday", data: 50, progress: "1500" }
+  ]);
   return (
     <React.Fragment>
       <h2>Last Weeks Status</h2>
@@ -16,171 +28,32 @@ const Status = () => {
               <h5 className="card-title">Target Calories</h5>
               <h6 className="card-subtitle mb-2 text-muted">2000</h6>
               <p className="card-text">
-                <div className="row">
-                  <div className="col-md-4">
-                    <p>Sun</p>
-                  </div>
-                  <div className="col-md-8">
-                    <div class="progress">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style={{ width: "100%" }}
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        2067 cals
-                      </div>
+                {dotw.map(d => (
+                  <div className="row">
+                    <div className="col-md-4">
+                      <small>{d.day}</small>
+                    </div>
+                    <div className="col-md-8 ">
+                      <LineProgress data={d.data} progress={d.progress} />
                     </div>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-4">
-                    <p>Mon</p>
-                  </div>
-                  <div className="col-md-8">
-                    <div class="progress">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style={{ width: "100%" }}
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        2067 cals
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-4">
-                    <p>Tues</p>
-                  </div>
-                  <div className="col-md-8">
-                    <div class="progress">
-                      <div
-                        class="progress-bar bg-success"
-                        role="progressbar"
-                        style={{ width: "93%" }}
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        1867 cals
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-4">
-                    <p>Wednes</p>
-                  </div>
-                  <div className="col-md-8">
-                    <div class="progress">
-                      <div
-                        class="progress-bar bg-success"
-                        role="progressbar"
-                        style={{ width: "83%" }}
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        1663 cals
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-4">
-                    <p>Thurs</p>
-                  </div>
-                  <div className="col-md-8">
-                    <div class="progress">
-                      <div
-                        class="progress-bar bg-success"
-                        role="progressbar"
-                        style={{ width: "93%" }}
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        1867 cals
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-4">
-                    <p>Fri</p>
-                  </div>
-                  <div className="col-md-8">
-                    <div class="progress">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style={{ width: "100%" }}
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        2067 cals
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-4">
-                    <p>Sat</p>
-                  </div>
-                  <div className="col-md-8">
-                    <div class="progress">
-                      <div
-                        class="progress-bar bg-primary"
-                        role="progressbar"
-                        style={{ width: "100%" }}
-                        aria-valuenow="25"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      >
-                        2067 cals
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </p>
             </div>
           </div>
         </div>
-        <div className="col-md-4 p-3">
-          <div className=" card" style={{ width: "100%" }}>
-            <div className="card-body">
-              <h5 className="card-title">Intermittent fasting</h5>
-              <h6 className="card-subtitle mb-2 text-muted">Goal 14 hours</h6>
-              <p className="card-text text-center">
-                <div class="card">
-                  <NivoDoughnut />
-                </div>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-4 p-3">
-          <div className=" card" style={{ width: "100%" }}>
-            <div className="card-body">
-              <h5 className="card-title">Ketosis</h5>
-              <h6 className="card-subtitle mb-2 text-muted">
-                You were in ketosis on these days.
-              </h6>
-              <p className="card-text text-center">
-                <i class="fa fa-calendar-check-o fa-2x"></i>
-                Wednesday
-              </p>
-              <NivoPie />
-            </div>
-          </div>
-        </div>
+        <Card
+          col={"col-md-4 p-3"}
+          title={"Intermittent fasting"}
+          header={"Target 14 hours"}
+          graph={<DoughnutChart />}
+        />
+        <Card
+          col={"col-md-4 p-3"}
+          title={"Workout"}
+          header={"Target 30min"}
+          graph={<HalfDoughnut />}
+        />
       </div>
     </React.Fragment>
   );

@@ -54,7 +54,7 @@ function App() {
             className="btn btn-primary"
             id="menu-toggle"
           >
-            Toggle Menu
+            <i className="fa fa-bars 4x"></i>
           </button>
 
           <div

@@ -7,6 +7,7 @@ import LineProgress from "./graphs/lineProgress";
 import Calendar from "./graphs/calendar";
 import Card from "./common/card";
 import CalendarMonth from "./graphs/calendarMonth";
+import HalfDoughnut from "./graphs/halfDoughnut";
 function HomePage() {
   const [users, setUsers] = useState();
 
@@ -45,7 +46,7 @@ function HomePage() {
               <p class="card-text">
                 <div className="row">
                   <div className="col-md-3">
-                    <DoughnutChart />
+                    <DoughnutChart chart={"1"} />
                   </div>
                   <div className="col-md-3">
                     <DoughnutChart />
@@ -64,7 +65,7 @@ function HomePage() {
           col={"col-md-3 p-3"}
           title={"Intermittent fasting"}
           header={"Target 14 hours a day"}
-          graph={<LineProgress />}
+          graph={<LineProgress progress={"14 hours"} data={100} />}
         />
         <Card
           col={"col-md-3 p-3"}
@@ -82,37 +83,45 @@ function HomePage() {
           col={"col-md-3 p-3"}
           title={"Steps or Workouts"}
           header={"Target 10,000 steps day"}
-          graph={<LineProgress />}
+          graph={<LineProgress progress={"5,000 steps"} data={50} />}
         />
       </div>
       <div className="row">
         <div class="col-md-8 p-3">
-          <div class=" card" style={{ width: "100%" }}>
+          <div class=" card">
             <div class="card-body">
-              <h5 class="card-title">Breakfast this Week</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text"></p>
-              <div>
-                <CalendarMonth />
+              <h5 class="card-title">Monthly Goals</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Dec</h6>
+              <div className="row">
+                <div class="ml-2 col-md-5 pl-3">
+                  <CalendarMonth />
+                </div>
+                <div class="col-md-6 p-3">
+                  <h6 class="card-subtitle mb-4 text-muted">
+                    <i className="fa fa-check-square-o"></i> You hit your
+                    targets 13 times
+                  </h6>
+                  <h6 class="card-subtitle mb-4 text-muted">
+                    <i className="fa fa-check-square-o"></i> You were in Ketosis
+                    2 days a week
+                  </h6>
+                  <h6 class="card-subtitle mb-4 text-muted">
+                    <i className="fa fa-check-square-o"></i> You hit your steps
+                    everyday!
+                  </h6>
+                </div>
               </div>
-              <a href="#" class="card-link">
-                Card link
-              </a>
-              <a href="#" class="card-link">
-                Another link
-              </a>
             </div>
           </div>
         </div>
         <div class="col-md-4 p-3">
           <div class=" text-center card" style={{ width: "100%" }}>
             <div class="card-body">
-              <h5 class="card-title">Daily Calories</h5>
-              <h6 class="card-subtitle mb-2 text-muted">2000</h6>
+              <h5 class="card-title">Active Workouts</h5>
+              <h6 class="card-subtitle mb-2 text-muted">30mins a day</h6>
               <p class="card-text"></p>
-              <a href="#" class="card-link">
-                Another link
-              </a>
+
+              <HalfDoughnut />
             </div>
           </div>
         </div>
