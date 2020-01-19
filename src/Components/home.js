@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import DoughnutChart from "./graphs/doughnutChart";
-
 import LineProgress from "./graphs/lineProgress";
 import Calendar from "./graphs/calendar";
 import Card from "./common/card";
