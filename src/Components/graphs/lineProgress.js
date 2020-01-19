@@ -5,12 +5,9 @@ const LineProgress = ({ data, progress }) => {
   const [end, setEnd] = useState(0);
   const [count, setCount] = useState(0);
 
-  console.log(count, progress, end, data);
-
   const myProgress = progress;
   const myData = data;
   useEffect(() => {
-    console.log("progress", myProgress);
     if (myProgress > count) setCount(count + 1);
     if (end !== myData) setEnd(end + 1);
   });

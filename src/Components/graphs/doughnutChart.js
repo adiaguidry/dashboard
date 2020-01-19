@@ -12,7 +12,7 @@ const DoughnutChart = ({ chart }) => {
     datasets: [
       {
         backgroundColor: ["rgb(69, 244, 111)", "#81a8ff", "#AFF000"],
-        data: [10, 3, 5]
+        data: [50, 155, 99]
       }
     ],
     cutoutPercentage: 0

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DoughnutChart from "./graphs/doughnutChart";
-// import NivoGraph from "./nivoGraphs/nivoGraph";
-// import NivoLineGraph from "./nivoGraphs/nivoLineGraph";
-// import NivoCalendar from "./nivoCalendar";
+
 import LineProgress from "./graphs/lineProgress";
 import Calendar from "./graphs/calendar";
 import Card from "./common/card";
@@ -40,10 +38,11 @@ function HomePage() {
           <div class=" card" style={{ width: "100%" }}>
             <div class="card-body">
               <h5 class="card-title">Meal Breakdown</h5>
+
               <span class="badge badge-primary m-1">Fats</span>
               <span class="badge badge-success m-1">Protiens</span>
               <span class="badge badge-info m-1">Carbs</span>
-              <p class="card-text">
+              <div class="card-text">
                 <div className="row">
                   <div className="col-md-3">
                     <DoughnutChart chart={"1"} />
@@ -55,6 +54,10 @@ function HomePage() {
                     <DoughnutChart />
                   </div>
                 </div>
+              </div>
+              <p className="mt-4">
+                Each of your meals are broken down into 3 macro groups, this
+                will determine your ketone levels.
               </p>
             </div>
           </div>

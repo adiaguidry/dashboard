@@ -50,7 +50,7 @@ const Status = () => {
         />
         <Card
           col={"col-md-4 p-3"}
-          title={"Workout"}
+          title={"Workouts"}
           header={"Target 30min"}
           graph={<HalfDoughnut />}
         />
