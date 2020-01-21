@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Homepage from "./home";
-import Profile from "./profile";
-import Status from "./status";
+import React, { useState } from "react";
+
 import SideBar from "./sideBar";
-import { useRoutes, A } from "hookrouter";
+import { useRoutes } from "hookrouter";
 import routes from "./routes";
 
 const NavBar = () => {

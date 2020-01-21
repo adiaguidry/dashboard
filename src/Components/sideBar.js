@@ -1,7 +1,5 @@
 import React from "react";
-import { useRoutes, A } from "hookrouter";
-import Profile from "./profile";
-import Home from "./home";
+import { A } from "hookrouter";
 
 const SideBar = () => {
   return (

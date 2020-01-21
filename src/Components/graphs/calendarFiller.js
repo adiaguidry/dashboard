@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Calendar from "./calendar";
 
 const CalendarFiller = ({ ketoDay, noKetoDay }) => {
-  console.log(ketoDay);
   return (
     <ul>
       <li style={{ backgroundColor: ketoDay }}>Mon</li>

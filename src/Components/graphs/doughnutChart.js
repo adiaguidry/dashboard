@@ -18,9 +18,6 @@ const DoughnutChart = ({ chart }) => {
     cutoutPercentage: 0
   });
 
-  useEffect(() => {
-    console.log(Doughnut.defaults);
-  });
   return (
     <div style={{ width: 350, height: 150 }}>
       <Doughnut
