@@ -10,7 +10,7 @@ function HomePage() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("/");
+      const response = await fetch("/healthtracker");
       const healthTracker = await response.json();
       const user = healthTracker[0];
       console.log(user);

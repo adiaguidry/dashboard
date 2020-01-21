@@ -11,7 +11,7 @@ const Status = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("/");
+      const response = await fetch("/healthtracker");
       const healthTracker = await response.json();
       const dotw = healthTracker[0].week;
       console.log(dotw);
