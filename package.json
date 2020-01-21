@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://secret-scrubland-67195.herokuapp.com",
+  "proxy": "https://secret-scrubland-67195.herokuapp.com/healthtracker",
   "eslintConfig": {
     "extends": "react-app"
   },
