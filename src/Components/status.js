@@ -11,7 +11,9 @@ const Status = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("/healthtracker");
+      const response = await fetch(
+        "https://secret-scrubland-67195.herokuapp.com/healthtracker"
+      );
       const healthTracker = await response.json();
       const dotw = healthTracker[0].week;
       console.log(dotw);

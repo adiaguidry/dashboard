@@ -10,7 +10,9 @@ function HomePage() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("/healthtracker");
+      const response = await fetch(
+        "https://secret-scrubland-67195.herokuapp.com/healthtracker"
+      );
       const healthTracker = await response.json();
       const user = healthTracker[0];
       console.log(user);
