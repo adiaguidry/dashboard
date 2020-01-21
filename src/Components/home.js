@@ -12,7 +12,7 @@ function HomePage() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `${process.env.REACT_APP_URL}/healthtracker`
+        `https://cors-anywhere.herokuapp.com/${process.env.REACT_APP_URL}/healthtracker`
       );
       const healthTracker = await response.json();
       const user = healthTracker[0];

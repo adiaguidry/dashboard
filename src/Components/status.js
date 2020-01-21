@@ -11,11 +11,16 @@ const Status = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch("/healthtracker");
-      const healthTracker = await response.json();
-      const dotw = healthTracker[0].week;
-      console.log(dotw);
-      setdotw(dotw);
+      try {
+        const response = await fetch(
+          `https://cors-anywhere.herokuapp.com/${process.env.REACT_APP_URL}/healthtracker`
+        );
+        const healthTracker = await response.json();
+        const dotw = healthTracker[0].week;
+        setdotw(dotw);
+      } catch (err) {
+        console.log("status..", err);
+      }
     }
     fetchData();
   }, []);
