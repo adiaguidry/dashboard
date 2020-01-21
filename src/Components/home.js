@@ -5,14 +5,13 @@ import Calendar from "./graphs/calendar";
 import Card from "./common/card";
 import CalendarMonth from "./graphs/calendarMonth";
 import HalfDoughnut from "./graphs/halfDoughnut";
+
 function HomePage() {
   const [user, setUser] = useState();
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(
-        "https://secret-scrubland-67195.herokuapp.com/healthtracker"
-      );
+      const response = await fetch("/healthtracker");
       const healthTracker = await response.json();
       const user = healthTracker[0];
       console.log(user);
