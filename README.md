@@ -15,6 +15,6 @@ The layout was built on Bootstaps Dashboard template.
 
 There data is pull into the frontend React componets. I used hooks to manipulate the data and update the UI
 
-Currently live on Heroku: [](https://guarded-refuge-33074.herokuapp.com/)
+Currently live on Heroku: [Dashboard-live](https://guarded-refuge-33074.herokuapp.com/)
 
 
